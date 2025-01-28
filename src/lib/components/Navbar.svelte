@@ -7,7 +7,7 @@
   </script>
   
   <nav class="navbar">
-    <div class="logo">Meu Portfólio</div>
+    <div class="logo">Meu  asdw Portfólio</div>
     <ul>
       {#each links as { href, label }}
         <li><a href={href}>{label}</a></li>
