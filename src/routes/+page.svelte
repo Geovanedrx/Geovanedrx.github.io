@@ -1,14 +1,5 @@
-<script>
-    import Button from "$lib/components/Button.svelte";
-  </script>
-  
-  <section class="hero">
-    <img src="/images/profile.jpg" alt="Foto de perfil" class="profile-img" />
-    <h1>Bem-vindo ao Meu Portfólio!</h1>
-    <p>Explore meus projetos e entre em contato.</p>
-    <Button href="/sobre">Saiba Mais</Button>
-  </section>
-  
+<h1>Welcome to SvelteKit</h1>
+<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation para fazer um teste de novo</p>
   <style>
     .hero {
       text-align: center;
