@@ -43,6 +43,6 @@
         
         Quando o tempo passar e a saudade bater, este site estará aqui, como um portal para reviver cada risada, cada trabalho em grupo e cada instante especial que compartilhamos.
         
-        Informática 4B – IFMS 2025. Voces estarão para sempre em minhas memórias. 💙</p>
+        Informática B – IFMS 2025. Voces estarão para sempre em minhas memórias. 💙</p>
     <a href="/">Voltar ao Início</a>
   </div>
