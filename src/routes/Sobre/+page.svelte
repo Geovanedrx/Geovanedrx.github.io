@@ -37,7 +37,7 @@
   
   <div class="container" transition:fade>
     <h1>Para a Turma</h1>
-    <p>Nossa turma está junta desde 2023, compartilhando risadas, brigas e conquistas. Agora, em 2025, estamos indo para o nosso ultimo ano, e espero que a gente construa memórias inesquecíveis.
+    <p>Nossa turma está junta desde 2023, compartilhando risadas, brigas e conquistas. Agora, em 2025, estamos indo para o nosso ultimo ano,  espero que a gente construa memórias inesquecíveis.
 
         Criar este site foi uma forma de expressar o quanto amo essa turma. Sei que, um dia, cada um de nós seguirá seu próprio caminho, mas os momentos que vivemos aqui jamais serão esquecidos por mim. Este espaço foi feito para registrar nossa história, nossas fotos, nossos vídeos – tudo o que nos tornou uma família ao longo desses anos.
         
