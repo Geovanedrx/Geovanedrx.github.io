@@ -17,6 +17,32 @@
 </script>
 
 <style>
+  
+  @media (max-width: 768px) {
+  .year-selector {
+    font-size: 1em;
+    padding: 5px 10px;
+  }
+
+  .year-selector span {
+    font-size: 1.2em;
+    padding: 8px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  img, video {
+    max-width: 90vw;
+  }
+
+  .download-btn {
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+}
+
   html, body {
     height: 100%;
     margin: 0;
@@ -224,7 +250,7 @@
 <header class="hero">
 
 
-<!-- Overlay do menu (Agora só aparece quando showMenu for true) -->
+<!-- Overlay do menu ( só aparece quando showMenu for true) -->
 {#if showMenu}
   <div class="menu-overlay">
     <a href="/" transition:fade>Início</a>
