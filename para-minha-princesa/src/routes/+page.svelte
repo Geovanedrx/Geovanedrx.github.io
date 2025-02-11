@@ -242,7 +242,7 @@
   
   <header class="hero">
     <nav class="navbar">
-      <a href="/Sobre">Sobre</a>
+      <a href="/Sobre"> Sobre </a>
     </nav>
     <div class="hero-content">
       <p>Para</p>
