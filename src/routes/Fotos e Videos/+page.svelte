@@ -249,6 +249,22 @@
     text-decoration: underline;
   }
 
+  @media (max-width: 768px) {
+  .video-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.video-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+  gap: 10px; /* Espaçamento entre os vídeos */
+  width: 100%;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+}
 
 </style>
 

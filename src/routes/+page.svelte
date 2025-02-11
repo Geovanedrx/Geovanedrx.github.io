@@ -2,46 +2,42 @@
   import { fade } from 'svelte/transition';
   let showMenu = false;
 
-  // Função para alternar o menu de traços
   function toggleMenu() {
     showMenu = !showMenu;
   }
 
-  // Função para navegar para a página de fotos e vídeos
   function goToGallery() {
-    // Adiciona uma animação antes de redirecionar
     setTimeout(() => {
       window.location.href = '/gallery';
-    }, 300); // Tempo da animação
+    }, 300);
   }
 </script>
 
 <style>
-  
   @media (max-width: 768px) {
-  .year-selector {
-    font-size: 1em;
-    padding: 5px 10px;
-  }
+    .year-selector {
+      font-size: 1em;
+      padding: 5px 10px;
+    }
 
-  .year-selector span {
-    font-size: 1.2em;
-    padding: 8px;
-  }
+    .year-selector span {
+      font-size: 1.2em;
+      padding: 8px;
+    }
 
-  .gallery {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
+    .gallery {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
 
-  img, video {
-    max-width: 90vw;
-  }
+    img, video {
+      max-width: 90vw;
+    }
 
-  .download-btn {
-    font-size: 16px;
-    padding: 8px 15px;
+    .download-btn {
+      font-size: 16px;
+      padding: 8px 15px;
+    }
   }
-}
 
   html, body {
     height: 100%;
@@ -50,6 +46,8 @@
     overflow: hidden;
     font-family: 'Arial', sans-serif;
     color: white;
+    width: 100vw;
+    overflow-x: hidden;
   }
 
   .background {
@@ -115,161 +113,140 @@
   }
 
   .hero-content {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  line-height: 1.2;
-  font-family: "Caveat", serif;
-}
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+    font-family: "Caveat", serif;
+  }
 
-.hero h1 {
-  font-family: "Caveat", serif;
-  font-size: 3.5em;
-  font-weight: bold;
-  margin: 0;
-}
+  .hero h1 {
+    font-family: "Caveat", serif;
+    font-size: 3.5em;
+    font-weight: bold;
+    margin: 0;
+  }
 
-.hero p {
-  font-family: "Caveat", serif;
-  font-size: 2em;
-  font-weight: 400;
-  margin: 5px 0;
-}
+  .hero p {
+    font-family: "Caveat", serif;
+    font-size: 2em;
+    font-weight: 400;
+    margin: 5px 0;
+  }
 
-.menu-icon {
-  position: absolute;
-  top: 50px; /* Ajuste para descer */
-  left: 20px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  z-index: 1000; /* Mantém o botão sempre na frente */
-}
+  .menu-icon {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+  }
 
-.menu-icon:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
+  .menu-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 
-.menu-icon div {
-  width: 30px;
-  height: 3px;
-  background-color: white;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
+  .menu-icon div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
 
-.menu-icon.active div:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
+  .menu-icon.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
 
-.menu-icon.active div:nth-child(2) {
-  opacity: 0;
-}
+  .menu-icon.active div:nth-child(2) {
+    opacity: 0;
+  }
 
-.menu-icon.active div:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
+  .menu-icon.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
 
-/* Correção do overlay */
-.menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  z-index: 999;
-  font-family: "Caveat", serif; /* Mesma fonte do centro */
-}
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 999;
+    font-family: "Caveat", serif;
+  }
 
-/* Quando ativo */
-.menu-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
+  .menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
 
-/* Estilo dos links */
-.menu-overlay a {
-  font-family: "Caveat", serif; /* Mesma fonte do centro */
-  color: white;
-  font-size: 2em;
-  text-decoration: none;
-  margin: 20px;
-  transition: color 0.3s ease, border 0.3s ease;
-  padding: 10px 20px;
-  border: 2px solid transparent;
-}
+  .menu-overlay a {
+    font-family: "Caveat", serif;
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+    margin: 20px;
+    transition: color 0.3s ease, border 0.3s ease;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+  }
 
-/* Efeito ao passar o mouse */
-.menu-overlay a:hover {
-  color: #c79a6d;
-  border: 2px solid #c79a6d;
-  border-radius: 10px;
-}
+  .menu-overlay a:hover {
+    color: #c79a6d;
+    border: 2px solid #c79a6d;
+    border-radius: 10px;
+  }
+
   .video-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-}
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    max-width: 100%;
+    overflow: hidden;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
 </style>
 
 <video autoplay loop muted playsinline class="video-background">
   <source src="/videos/background1.mp4" type="video/mp4">
 </video>
 
-<!-- Ícone do menu -->
 <div class="menu-icon {showMenu ? 'active' : ''}" on:click={toggleMenu}>
   <div></div>
   <div></div>
   <div></div>
 </div>
 
-
-<!-- Overlay do menu (sem fade aqui) -->
 <div class="menu-overlay {showMenu ? 'active' : ''}">
-  <a href="/Fotos e Videos" transition:fade>Fotos e Vídeos</a>
+  <a href="Fotos e Videos" transition:fade>Fotos e Vídeos</a>
 </div>
 
-
 <header class="hero">
-
-
-<!-- Overlay do menu ( só aparece quando showMenu for true) -->
-{#if showMenu}
-  <div class="menu-overlay">
-    <a href="/" transition:fade>Início</a>
-    <a href="/gallery" transition:fade>Fotos e Vídeos</a>
-  </div>
-{/if}
-
-  <!-- Sobre no canto superior esquerdo -->
   <nav class="navbar">
     <a href="/Sobre">Sobre</a>
   </nav>
-
-
-  <!-- Conteúdo central -->
   <div class="hero-content">
     <p>From</p>
     <h1>Informática 4B</h1>
     <p>Ifms 2025</p>
-    
   </div>
-
 </header>
